@@ -1,29 +1,52 @@
-# 🏦 BankSim
+# 🏦 BankSim - Secure Banking System
 
-A secure .NET 9 banking system with account management and transaction processing.
+![Banking App Screenshot](https://via.placeholder.com/800x400?text=BankSim+Screenshot) <!-- Replace with actual screenshot -->
 
-## Key Features
-- ✅ User authentication (Register/Login)  
-- 💳 Account management (Create/View accounts)  
-- 💸 Transactions (Deposit/Withdraw/Transfer)  
-- 📊 Transaction history 
+A .NET 9 console application for managing bank accounts and transactions with full documentation support.
 
-## Quick Start
+## ✨ Key Features
+
+| Feature | Description |
+|---------|-------------|
+| 🔐 **Secure Authentication** | User registration and login with password hashing |
+| 💼 **Account Management** | Create and manage savings/current accounts |
+| 💰 **Transaction Processing** | Deposit, withdraw, and transfer funds |
+| 📜 **Transaction History** | View complete audit trails |
+| 📝 **Self-Documenting** | Full XML comment support |
+
+## 🚀 Quick Start
+
+### Prerequisites
+- [.NET SDK 9.0+](https://dotnet.microsoft.com/download)
+- [Git](https://git-scm.com/) (optional)
+
+### Installation
 ```bash
-dotnet run
+git clone https://github.com/your-username/BankingApp.git
+cd BankingApp
 
-#### 2. **`docs/index.md` (Detailed Documentation)**
-```markdown
-# 📚 BankingApp Documentation
+## Running the Application
+```dotnet run
 
-
-
-Program Structure
-
+## 📂 Project Structure
 BankSim/
-├── Models/           → Data classes like User, Account, Transaction
-├── Interfaces/       → Definitions for what each service  or model must do
-├── Services/         → The brains (register user, deposit money, etc.)
-├── Data/             → Reading/writing data to file, managing memory
-├── Helpers/            → Hashing passwords, validations
-└── Program.cs        → The menu-based app flow
+├── Models/           # Data models and entities
+│   ├── User.cs       # User profiles and credentials
+│   ├── Account.cs    # Base account functionality
+│   └── Transaction.cs # Financial transaction records
+├── Interfaces/       # Service contracts
+├── Services/         # Core business logic
+│   ├── AuthService.cs # Authentication
+│   └── BankService.cs # Account operations
+├── Data/             # Data persistence
+├── Helpers/          # Utilities
+└── Program.cs        # Application entry point
+
+
+## Testing
+```bash
+dotnet test
+
+## Generate docs
+```bash
+``` ./generate-docs.ps1  (in windows)
