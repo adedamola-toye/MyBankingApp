@@ -35,6 +35,7 @@ cd BankingApp
 ```
 
 ## 📂 Project Structure
+```bash
 BankSim/
 ├── Models/           # Data models and entities
 │   ├── User.cs       # User profiles and credentials
@@ -48,6 +49,7 @@ BankSim/
 ├── Helpers/          # Utilities
 └── Program.cs        # Application entry point
 
+``` 
 
 ## Testing
 ```bash
