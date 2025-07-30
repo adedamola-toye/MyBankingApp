@@ -1,20 +1,32 @@
-name: Docs
-on: push
+name: Generate Docs
+on: [push]
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: |
-          mkdir -p _includes
+      
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '9.0.x'
+      
+      - name: Build and Generate Docs
+        run: |
           dotnet build
-          # Convert XML to Markdown
-          $xml = [xml](Get-Content "bin/Debug/net9.0/BankingApp.xml")
-          $md = $xml.doc.members.member | Where-Object { $_.name -like 'T:*' } | ForEach-Object {
-            "### $($_.name.Substring(2))`n$($_.summary)`n"
-          }
-          $md | Out-File "_includes/autogen.md"
-      - uses: peaceiris/actions-gh-pages@v3
+          mkdir -p docs
+          
+          # Convert XML to HTML
+          echo "<!DOCTYPE html><html><head><title>BankingApp Docs</title><style>body{font-family:sans-serif;margin:2em}</style></head><body><h1>BankingApp Documentation</h1>" > docs/index.html
+          
+          # Process XML comments
+          xmlstarlet sel -t -m "//member[starts-with(@name,'T:')]" -v "concat('&lt;h2&gt;', substring-after(@name,'T:'), '&lt;/h2&gt;&lt;p&gt;', summary, '&lt;/p&gt;')" -n "bin/Debug/net9.0/BankingApp.xml" >> docs/index.html
+          
+          echo "</body></html>" >> docs/index.html
+      
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
+          publish_dir: ./docs
