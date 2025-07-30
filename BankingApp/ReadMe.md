@@ -25,8 +25,14 @@ A .NET 9 console application for managing bank accounts and transactions with fu
 git clone https://github.com/your-username/BankingApp.git
 cd BankingApp
 
-## Running the Application
+
+```
+
+### Running the Application
+```bash
 ```dotnet run
+
+```
 
 ## 📂 Project Structure
 BankSim/
@@ -47,6 +53,7 @@ BankSim/
 ```bash
 dotnet test
 
+```
 ## Generate docs
 ```bash
 ``` ./generate-docs.ps1  (in windows)
