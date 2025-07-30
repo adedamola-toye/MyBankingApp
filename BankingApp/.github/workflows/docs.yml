@@ -1,0 +1,20 @@
+name: Docs
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          mkdir -p _includes
+          dotnet build
+          # Convert XML to Markdown
+          $xml = [xml](Get-Content "bin/Debug/net9.0/BankingApp.xml")
+          $md = $xml.doc.members.member | Where-Object { $_.name -like 'T:*' } | ForEach-Object {
+            "### $($_.name.Substring(2))`n$($_.summary)`n"
+          }
+          $md | Out-File "_includes/autogen.md"
+      - uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./

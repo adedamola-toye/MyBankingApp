@@ -1,15 +1,21 @@
 {
   "version": 2,
-  "dgSpecHash": "iYaVS65+84A=",
+  "dgSpecHash": "d8pYtwcwu3Q=",
   "success": true,
-  "projectFilePath": "D:\\Documents\\Github\\C# new\\MyBankingApp\\BankingApp.Tests\\BankingApp.Tests.csproj",
+  "projectFilePath": "d:\\Documents\\Github\\C#New\\MyBankingApp\\BankingApp.Tests\\BankingApp.Tests.csproj",
   "expectedPackageFiles": [
+    "D:\\dotnet-cli\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "D:\\dotnet-cli\\.nuget\\packages\\coverlet.collector\\6.0.2\\coverlet.collector.6.0.2.nupkg.sha512",
+    "D:\\dotnet-cli\\.nuget\\packages\\microsoft.build.tasks.git\\8.0.0\\microsoft.build.tasks.git.8.0.0.nupkg.sha512",
     "D:\\dotnet-cli\\.nuget\\packages\\microsoft.codecoverage\\17.12.0\\microsoft.codecoverage.17.12.0.nupkg.sha512",
     "D:\\dotnet-cli\\.nuget\\packages\\microsoft.net.test.sdk\\17.12.0\\microsoft.net.test.sdk.17.12.0.nupkg.sha512",
+    "D:\\dotnet-cli\\.nuget\\packages\\microsoft.sourcelink.common\\8.0.0\\microsoft.sourcelink.common.8.0.0.nupkg.sha512",
+    "D:\\dotnet-cli\\.nuget\\packages\\microsoft.sourcelink.github\\8.0.0\\microsoft.sourcelink.github.8.0.0.nupkg.sha512",
     "D:\\dotnet-cli\\.nuget\\packages\\microsoft.testplatform.objectmodel\\17.12.0\\microsoft.testplatform.objectmodel.17.12.0.nupkg.sha512",
     "D:\\dotnet-cli\\.nuget\\packages\\microsoft.testplatform.testhost\\17.12.0\\microsoft.testplatform.testhost.17.12.0.nupkg.sha512",
-    "D:\\dotnet-cli\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "D:\\dotnet-cli\\.nuget\\packages\\moq\\4.20.72\\moq.4.20.72.nupkg.sha512",
+    "D:\\dotnet-cli\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "D:\\dotnet-cli\\.nuget\\packages\\system.diagnostics.eventlog\\6.0.0\\system.diagnostics.eventlog.6.0.0.nupkg.sha512",
     "D:\\dotnet-cli\\.nuget\\packages\\system.reflection.metadata\\1.6.0\\system.reflection.metadata.1.6.0.nupkg.sha512",
     "D:\\dotnet-cli\\.nuget\\packages\\xunit\\2.9.2\\xunit.2.9.2.nupkg.sha512",
     "D:\\dotnet-cli\\.nuget\\packages\\xunit.abstractions\\2.0.3\\xunit.abstractions.2.0.3.nupkg.sha512",
@@ -20,5 +26,27 @@
     "D:\\dotnet-cli\\.nuget\\packages\\xunit.extensibility.execution\\2.9.2\\xunit.extensibility.execution.2.9.2.nupkg.sha512",
     "D:\\dotnet-cli\\.nuget\\packages\\xunit.runner.visualstudio\\2.8.2\\xunit.runner.visualstudio.2.8.2.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "message": "BankingApp.Tests depends on Microsoft.SourceLink.GitHub (>= 1.2.1) but Microsoft.SourceLink.GitHub 1.2.1 was not found. Microsoft.SourceLink.GitHub 8.0.0 was resolved instead.",
+      "projectPath": "d:\\Documents\\Github\\C#New\\MyBankingApp\\BankingApp.Tests\\BankingApp.Tests.csproj",
+      "warningLevel": 1,
+      "filePath": "d:\\Documents\\Github\\C#New\\MyBankingApp\\BankingApp.Tests\\BankingApp.Tests.csproj",
+      "libraryId": "Microsoft.SourceLink.GitHub",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "message": "Error occurred while getting package vulnerability data: There is not enough space on the disk. : 'C:\\Users\\hussa\\AppData\\Local\\NuGet\\v3-cache\\670c1461c29885f9aa22c281d8b7da90845b38e4$ps_api.nuget.org_v3_index.json\\vuln_data_base.dat-new'.",
+      "projectPath": "d:\\Documents\\Github\\C#New\\MyBankingApp\\BankingApp.Tests\\BankingApp.Tests.csproj",
+      "warningLevel": 1,
+      "filePath": "d:\\Documents\\Github\\C#New\\MyBankingApp\\BankingApp.Tests\\BankingApp.Tests.csproj",
+      "targetGraphs": []
+    }
+  ]
 }

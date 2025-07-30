@@ -1,0 +1,43 @@
+{
+  "$id": "1",
+  "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[BankingApp.Models.User, BankingApp]], System.Private.CoreLib",
+  "a71389b9-d1a8-41af-b409-ce481b273665": {
+    "$id": "2",
+    "$type": "BankingApp.Models.User, BankingApp",
+    "UserId": "a71389b9-d1a8-41af-b409-ce481b273665",
+    "Username": "Toyibah",
+    "PasswordHash": "+fsxWlwfM16l4wfXuSkcJPi2SLGi+mE1wJS1Y6ZGM0w=",
+    "Accounts": {
+      "$id": "3",
+      "$type": "System.Collections.Generic.List`1[[BankingApp.Models.BankAccount, BankingApp]], System.Private.CoreLib",
+      "$values": [
+        {
+          "$id": "4",
+          "$type": "BankingApp.Models.SavingsAccount, BankingApp",
+          "AccountNo": "6388948156",
+          "Balance": 100000.0,
+          "DateCreated": "2025-07-30T14:12:47.0376857+01:00",
+          "TransactionHistory": {
+            "$id": "5",
+            "$type": "System.Collections.Generic.List`1[[BankingApp.Models.Transaction, BankingApp]], System.Private.CoreLib",
+            "$values": [
+              {
+                "$id": "6",
+                "$type": "BankingApp.Models.Transaction, BankingApp",
+                "Id": "179e1c70-b3d9-4f9b-a18d-e96b87f7e498",
+                "Amount": 100000.0,
+                "Date": "2025-07-30T14:13:32.6728874+01:00",
+                "Description": "100,000 deposited",
+                "OtherPartyAcct": null,
+                "Type": 0,
+                "BalanceBeforeTransaction": 0.0,
+                "BalanceAfterTransaction": 100000.0
+              }
+            ]
+          },
+          "Type": 0
+        }
+      ]
+    }
+  }
+}
