@@ -1,7 +1,5 @@
 # 🏦 BankSim - Secure Banking System
 
-![Banking App Screenshot](https://via.placeholder.com/800x400?text=BankSim+Screenshot) <!-- Replace with actual screenshot -->
-
 A .NET 9 console application for managing bank accounts and transactions with full documentation support.
 
 ## ✨ Key Features
@@ -58,4 +56,4 @@ dotnet test
 ```
 ## Generate docs
 ```bash
-``` ./generate-docs.ps1  (in windows)
+./generate-docs.ps1  (in windows)
